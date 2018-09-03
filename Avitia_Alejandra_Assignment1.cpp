@@ -97,6 +97,7 @@ int main()
 	cout << (isValidWff ? "That is a Wff" : "NOT Valid WFF") << endl;
 	cout << "Do you want to try again? Enter y or Y: ";
 	cin >> ans;
+	cin.ignore();
 	} while (ans == 'y' || ans == 'Y');
 	
 
