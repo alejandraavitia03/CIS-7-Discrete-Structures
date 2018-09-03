@@ -1,5 +1,5 @@
-﻿// Avitia_Alejandra_&Luu_Mai_Assignment1.cpp : Defines the entry point for the console application.
-#include "stdafx.h"
+// Avitia_Alejandra_&Luu_Mai_Assignment1.cpp : Defines the entry point for the console application.
+//#include "stdafx.h"
 #include <iostream>
 #include <string>
 
@@ -8,35 +8,39 @@ using namespace std;
 int main()
 {
 	string userInput;
-
-	cout << "Enter a string: ";
-	getline(cin, userInput);
-
-	cout << "\nYou entered: " << userInput << endl;
-	bool lastWasAlpha = false;
-	bool lastWasNot = false;
-	bool lastWasConnector = false;
-	bool lastWasPartOfImplies = false;
-	bool isValidWff = true;
-	for (unsigned int i = 0; i < userInput.length(); i++)
+	char ans;
+	
+	do
 	{
-		char c = userInput[i];
-		if (c == ' ')
+		cout << "Enter a string: ";
+		getline(cin, userInput);
+
+		cout << "\nYou entered: " << userInput << endl;
+		bool lastWasAlpha = false;
+		bool lastWasNot = false;
+		bool lastWasConnector = false;
+		bool lastWasPartOfImplies = false;
+		bool isValidWff = true;
+
+		for (unsigned int i = 0; i < userInput.length(); i++)
 		{
-			continue;
-		}
-		if (c == '!' || c == 'V' || c == '^' || c == 'v' || c == '-' || c == '>')
-		{
-			if (c != '!' && c != '-' && c != '>')
+			char c = userInput[i];
+			if (c == ' ')
 			{
-				if (!lastWasAlpha)
+				continue;
+			}
+			if (c == '!' || c == 'V' || c == '^' || c == 'v' || c == '-' || c == '>')
+			{
+				if (c != '!' && c != '-' && c != '>')
 				{
-					isValidWff = false;
-					break;
-				}
+					if (!lastWasAlpha)
+					{
+						isValidWff = false;
+						break;
+					}
 				lastWasConnector = true;
 			}
-			else if (c == '-'||  c == '>')
+			else if (c == '-' || c == '>')
 			{
 				if (c == '-')
 				{
@@ -56,7 +60,7 @@ int main()
 						break;
 					}
 					lastWasConnector = true;
-				}	
+				}
 			}
 			else // this only checks for ! 
 			{
@@ -90,9 +94,11 @@ int main()
 		}
 
 	}
-	
 	cout << (isValidWff ? "That is a Wff" : "NOT Valid WFF") << endl;
+	cout << "Do you want to try again? Enter y or Y: ";
+	cin >> ans;
+	} while (ans == 'y' || ans == 'Y');
+	
 
 	return 0;
-}
-
+} 
