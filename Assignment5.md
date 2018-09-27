@@ -1,26 +1,26 @@
-1. Proove each of the following. Indicate which proof method you are using and show your work.
-  -Show that the square root of 2 is irrational:
-   (CONTRADICTION) Suppose that the sqrt(2) is rational and can be written as two integers (p and q). We would have to assume that 
-   p and q have no common factors. 
-      -> If we were square both side we get 2 = p^2/q^2
-      -> p^2 = 2q^2
-      -> p^2 is even.
-      -> p itself has to be even
-      -> p^2 is divisible by four.
-      -> therefore q is even
-      -> p and q are both even 
-      -> this contradicts to our assumption that they have not common factors. 
-      -> sqrt(2) can't be rational.
+  1. Proove each of the following. Indicate which proof method you are using and show your work.
+    -Show that the square root of 2 is irrational:
+      (CONTRADICTION) Suppose that the sqrt(2) is rational and can be written as two integers (p and q). We would have to assume that 
+      p and q have no common factors. 
+        -> If we were square both side we get 2 = p^2/q^2
+        -> p^2 = 2q^2
+        -> p^2 is even.
+        -> p itself has to be even
+        -> p^2 is divisible by four.
+        -> therefore q is even
+        -> p and q are both even 
+        -> this contradicts to our assumption that they have not common factors. 
+        -> sqrt(2) can't be rational.
     
-  -If n = 25, 100, or 169, then n is a perfect square and is the sum of two perfect squares:
-  (EXHAUSTIVE) If n = 25:
-    ->sqrt(25) = 5
-    ->16 + 9 = 25
-      -> sqrt(16) = 4 && sqrt(9) = 3
-  If n = 100:
-    ->sqrt(100) = 10
-    ->64 + 36 = 100
-      ->sqrt(64) = 8 && sqrt(36) = 6
+    -If n = 25, 100, or 169, then n is a perfect square and is the sum of two perfect squares:
+      (EXHAUSTIVE) If n = 25:
+        ->sqrt(25) = 5
+        ->16 + 9 = 25
+        -> sqrt(16) = 4 && sqrt(9) = 3
+       If n = 100:
+        ->sqrt(100) = 10
+        ->64 + 36 = 100
+        ->sqrt(64) = 8 && sqrt(36) = 6
   If n = 169:
     ->sqrt(169) = 13
     ->144 + 25 = 169
