@@ -1,6 +1,7 @@
 1. Proove each of the following. Indicate which proof method you are using and show your work.
   -Show that the square root of 2 is irrational:
-   (CONTRADICTION) Suppose that the sqrt(2) is rational and can be written as two integers (p and q). We would have to assume that p and q have no common factors. 
+   (CONTRADICTION) Suppose that the sqrt(2) is rational and can be written as two integers (p and q). We would have to assume that 
+   p and q have no common factors. 
       -> If we were square both side we get 2 = p^2/q^2
       -> p^2 = 2q^2
       -> p^2 is even.
@@ -25,7 +26,8 @@
     ->144 + 25 = 169
       -> sqrt(144) = 12 && sqrt(25) = 5
       
-  -The sum of two odd integers is even. Hint: By definition, even integers can be expressed as 2n, thus odd integers can be expressed as 2n + 1:
+  -The sum of two odd integers is even. Hint: By definition, even integers can be expressed as 2n, 
+  thus odd integers can be expressed as 2n + 1:
   (DIRECT PROOF)
     Odd integer = 2n +- 1
     Even integer = 2n
@@ -87,4 +89,5 @@
       -> 3(m + k^2 +k + 1)
      By multipling it by three we know it is divisable by three. 
 
-  -Prove that for n >= 1, 9^n − 1 is divisible by 8 for all non-negative integers Hint: 4^(3+1) = 4 * 4^3 Hint: If 9^n - 1 = 8m, then 9^n = 8m + 1
+  -Prove that for n >= 1, 9^n − 1 is divisible by 8 for all non-negative integers 
+  Hint: 4^(3+1) = 4 * 4^3 Hint: If 9^n - 1 = 8m, then 9^n = 8m + 1
