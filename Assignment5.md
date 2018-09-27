@@ -87,4 +87,15 @@
         By multipling it by three we know it is divisable by three. 
       C. Prove that for n >= 1, 9^n − 1 is divisible by 8 for all non-negative integers 
        Hint: 4^(3+1) = 4 * 4^3 Hint: If 9^n - 1 = 8m, then 9^n = 8m + 1
+       Base Case: Assume that n = 1
+        -> 9^1 - 1
+        -> 9 -1
+        -> 8 is divisible by 8
+       Show 1, 2, 3, ... , n => 9^n - 1 * 8m
+        -> 1, 2, 3, ... , n, n + 1 => 9^(n + 1) - 1 = 8m
+        -> 9^n * ( -1
+        -> (8m + 1) * 9 -1
+        -> 72m + 9
+        -> 8(9m + 1)
+       It is divisible by 8!
        
