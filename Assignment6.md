@@ -4,7 +4,7 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include <ctime>
+#include <time.h>
 
 using namespace std;
 
@@ -27,11 +27,13 @@ int main()
 		cout << "Invalid entry. Please try again: ";
 		cin >> a >> b;
 	}
-	
+	t = clock();
+  	cout<<  "Calculating...\n";
 	results = getGCD(a, b);
 
 	cout << "\nThe GCD of " << a << " and " << b << " is: " << results << endl;
-	
+	t = clock() - t;
+  	cout << "It took me %d clicks (%f seconds).\n" << t << ((float)t)/CLOCKS_PER_SEC);
 
     return 0;
 }
