@@ -17,27 +17,33 @@
 		int a = 0;
 		int b = 0;
 		int results = 0;
-
-		//Prompting the user for the first int
-		cout << "This program will calculate the GCD of the two numbers you give it.\n";
-		cout << "Please enter two positive interger: ";
-		cin >> a >> b;
-		while (a <= 0 || b <= 0) //Validation
+		char choice;
+		do
 		{
-			cout << "Invalid entry. Please try again: ";
+			//Prompting the user for the first int
+			cout << "This program will calculate the GCD of the two numbers you give it.\n";
+			cout << "Please enter two positive interger: ";
 			cin >> a >> b;
-		}
+			while (a <= 0 || b <= 0) //Validation
+			{
+				cout << "Invalid entry. Please try again: ";
+				cin >> a >> b;
+			}
 	
-		cout << "Calculating...\n";
-		auto start = std::chrono::high_resolution_clock::now();
+			cout << "Calculating...\n";
+			auto start = std::chrono::high_resolution_clock::now();
 
-		results = getGCD(a, b);
+			results = getGCD(a, b);
 
-		cout << "\nThe GCD of " << a << " and " << b << " is: " << results << endl;
-		auto finish = std::chrono::high_resolution_clock::now();
-		chrono::duration<double> elapsed = finish - start;
-		cout << "Elapsed time: " << elapsed.count() * 1000 << " ms\n";
-	
+			cout << "\nThe GCD of " << a << " and " << b << " is: " << results << endl;
+			auto finish = std::chrono::high_resolution_clock::now();
+			chrono::duration<double> elapsed = finish - start;
+			cout << "Elapsed time: " << elapsed.count() * 1000 << " ms\n";
+			
+			cout << "Do you want to go again? Enter Y or y \n";
+			cin >> choice;
+			system("CLS");
+		}while(choice == 'Y' || choice == 'y');
 		return 0;
 	}
 	//Getting the 
